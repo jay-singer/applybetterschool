@@ -1,0 +1,137 @@
+/* Navigation link underline animation */
+.navTitle {
+  position: relative;
+  padding: 10px 0;
+}
+
+.navTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 4px;
+  background: #047857; /* Teal color */
+  border-radius: 14px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navTitle:hover::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown menu */
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  padding: 15px 30px;
+  background: white;
+  border-radius: 7px;
+  border: 1px solid #e5e7eb; /* Optional: subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.dropDown1:hover .list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mobile menu toggle */
+.animate {
+  position: absolute;
+  top: 79px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  transition: transform 0.45s ease-in-out, max-height 0.45s ease-in-out,
+    opacity 0.65s ease-in-out;
+}
+
+.animate.show {
+  max-height: 400px;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.animate.hide {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Toggle list one (destinations) */
+.animateListOne,
+.animateListTwo {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.animateListOne.show,
+.animateListTwo.show {
+  max-height: 300px;
+  height: fit-content;
+  pointer-events: auto;
+}
+
+.animateListOne.hide,
+.animateListTwo.hide {
+  max-height: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 743px) {
+  /* Mobile menu toggle */
+  .animate {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    transition: transform 0.55s ease-in-out, max-height 0.55s ease-in-out,
+      opacity 0.65s ease-in-out;
+  }
+
+  .animate.show {
+    max-height: 100vh;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .animate.hide {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Toggle list one (destinations) */
+  .animateListOne,
+  .animateListTwo {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .animateListOne.show,
+  .animateListTwo.show {
+    max-height: 300px;
+    height: fit-content;
+    pointer-events: auto;
+  }
+
+  .animateListOne.hide,
+  .animateListTwo.hide {
+    max-height: 0;
+    pointer-events: none;
+  }
+}
