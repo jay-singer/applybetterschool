@@ -1,7 +1,11 @@
 import StudentWithBook from "/personImage/StudentWithBook.png";
 const Section4 = () => {
   return (
+<<<<<<< HEAD
     <div className="bg-[#f3f8f5] lg:py-20   mt-10 ">
+=======
+    <div className="bg-[#f3f8f5] py-16 md:py-24  mt-10 ">
+>>>>>>> ef233d33e9ff0a4a4eddbd1a3b6a887e41c0054b
       <div className="container mx-auto text-center">
         {/* Top Section */}
         <div className="mb-8 md:mb-12 ">

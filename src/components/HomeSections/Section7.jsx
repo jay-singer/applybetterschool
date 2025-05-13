@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 const Section7 = () => {
   return (
+<<<<<<< HEAD
     <section className="lg:pt-12">
+=======
+    <section className="pt-12">
+>>>>>>> ef233d33e9ff0a4a4eddbd1a3b6a887e41c0054b
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
         Channel Partners
       </h1>
