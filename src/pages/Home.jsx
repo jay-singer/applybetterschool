@@ -32,7 +32,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="mx-[1rem] 2xl:mx-[2rem] lg:ms-[8rem] md:ms-[4rem] md:me-[3rem] space-y-8">
-        <div className="reveal  relative z-50">
+        <div className="reveal  relative z-20">
           <Section1 />
         </div>
         <div className="reveal">
